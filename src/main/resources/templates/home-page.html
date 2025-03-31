@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/home-page.css}">
+    <title>Home Page</title>
+</head>
+<body>
+<!-- Navbar Start -->
+<div class="nav-bar">
+    <p>Spring Boot Thymeleaf</p>
+</div>
+<!-- Navbar End -->
+
+<!-- Main Container Start -->
+<div class="main-container">
+    <div class="left-container">
+        <img th:src="@{/css/image/banner-image.svg}" alt="banner-image">
+    </div>
+
+    <div class="right-container">
+        <div class="card">
+            <h1>Spring Boot MVC and Thymeleaf</h1>
+            <hr />
+
+            <p th:if="${error}" th:text="${error}"></p>
+
+            <br />
+            <form action="/list-all-student">
+                <button type="submit">List All Students</button>
+            </form>
+
+            <br />
+            <form action="/add-student">
+                <button type="submit">Add Student</button>
+            </form>
+
+            <br />
+            <form action="/find-by-id" method="post">
+                <input type="number" name="id" placeholder="Student Id" required />
+                <button type="submit">Find Student By Id</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Main Container End -->
+
+<!-- Footer Start -->
+<div class="footer">
+    <p>(C) rakx07</p>
+</div>
+<!-- Footer End -->
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #212529;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    min-width: 200px;
+}
+
+button:hover {
+    background-color: rgba(33, 37, 41, 0.71);
+}
+
+.nav-bar {
+    height: 50px;
+    padding: 15px 5px;
+    background-color: #212529;
+    color: #fff;
+    text-align: left;
+}
+
+.main-container {
+    min-height: calc(100vh - 100px);
+    padding: 50px 75px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "left-container" "right-container";
+}
+
+@media screen and (min-width:850px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "left-container right-container";
+    }
+}
+
+.main-container .left-container {
+    grid-area: left-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .left-container img {
+    height: 80%;
+    width: 80%;
+}
+
+.main-container .right-container {
+    grid-area: right-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .right-container .card input {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+
+.footer {
+    height: 50px;
+    padding: 15px 5px;
+    background-color: #212529;
+    color: #fff;
+    text-align: center;
+}

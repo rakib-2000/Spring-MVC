@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student Page</title>
+</head>
+<body>
+<h1>Add Student Info</h1>
+<hr />
+
+<br />
+<form action="/add-student" method="post">
+    <p>Candidate Id</p>
+    <input type="number" name="id" />
+    <p>Student name</p>
+    <input type="text" name="name" />
+    <p>Student's Batch</p>
+    <input type="text" name="batch" />
+    <p>Student's Mark</p>
+    <input type="number" name="mark" /> ,<br><br>
+    <button type="submit">Add Student</button>
+</form>
+</body>
+</html>
